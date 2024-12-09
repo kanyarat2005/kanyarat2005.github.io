@@ -3,24 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>กรอบสี่เหลี่ยม</title>
+    <title>Personal Portfolio</title>
     <style>
-        .square-box {
-            width: 1900px; /* ความกว้าง */
-            height: 500px; /* ความสูง */
-            border: 2px solid black; /* เส้นขอบ */
-            background-color: lightblue; /* สีพื้นหลัง */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+        }
+        .container {
             display: flex;
-            align-items: center; /* จัดตำแหน่งแนวตั้ง */
-            justify-content: center; /* จัดตำแหน่งแนวนอน */
-            font-size: 24px;
+            padding: 40px;
+        }
+
+        .intro {
+            flex: 1;
+            padding-right: 20px;
+        }
+
+        .intro h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+
+        .intro p {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+
+        .social-icons {
+            margin-top: 20px;
+        }
+
+        .social-icons a {
+            margin-right: 15px;
+            text-decoration: none;
+            font-size: 1.5em;
+            color: black;
+        }
+
+        .profile-pic {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .profile-pic img {
+            width: 200px;
+            height: auto;
+            border: 2px solid black;
+            background-color: #88dbec;
+        }
+
+        .about-btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            border: 2px solid black;
+            background-color: #88dbec;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+
+        .about-btn:hover {
+            background-color: #72c7d9;
+        }
+
+        footer {
+            margin-top: 40px;
+            border-top: 2px solid black;
+            padding: 20px;
+            text-align: center;
         }
     </style>
 </head>
 <body>
-    <div class="square-box" >
-        PORTFOLIO
+    <div class="container">
+        <div class="intro">
+            <h1>Hi everyone.<br>I'm Aphinan.</h1>
+            <p>Student | Front-end Dev | UX&UI Design</p>
+            <div class="social-icons">
+                <a href="#">🐱</a>
+                <a href="#">🌐</a>
+                <a href="#">📷</a>
+                <a href="#">✉️</a>
+            </div>
+            <a href="#" class="about-btn">ABOUT ME</a>
+        </div>
+        <div class="profile-pic">
+            <img src="profile-pic.png" alt="Profile Picture">
+        </div>
     </div>
+    <footer>
+        &copy; 2024 Your Name
+    </footer>
 </body>
 </html>
-
