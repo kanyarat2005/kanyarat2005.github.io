@@ -5,12 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio</title>
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #ffffff;
-        }
         .container {
             display: flex;
             padding: 40px;
@@ -43,17 +37,21 @@
         }
 
         .profile-pic {
-            flex: 1;
+            width: 200px; /* กำหนดความกว้างของรูป */
+            height: 200px; /* กำหนดความสูงของรูป */
+            border: 2px solid black; /* เส้นขอบ */
+            border-radius: 50%; /* เปลี่ยนให้เป็นวงกลม */
+            background-color: #88dbec; /* สีพื้นหลัง */
             display: flex;
             justify-content: center;
             align-items: center;
+            overflow: hidden; /* ตัดส่วนที่เกินออก */
         }
 
         .profile-pic img {
-            width: 200px;
-            height: auto;
-            border: 2px solid black;
-            background-color: #88dbec;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* ปรับขนาดรูปให้พอดีกับวงกลม */
         }
 
         .about-btn {
@@ -69,34 +67,153 @@
         .about-btn:hover {
             background-color: #72c7d9;
         }
-
-        footer {
-            margin-top: 40px;
-            border-top: 2px solid black;
-            padding: 20px;
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffdbf0;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background: #444;
+            padding: 0.5rem 0;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 1rem;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1rem;
+        }
+        .section {
+            margin-bottom: 2rem;
+        }
+        .section h2 {
+            margin-bottom: 1rem;
+            color: #333;
+        }
+        .projects {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .project {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            width: calc(33.333% - 1rem);
+            padding: 1rem;
+            box-sizing: border-box;
+        }
+        .project img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+        .social-links {
+            margin-top: 1rem;
+        }
+        .social-links a {
+            margin: 0 0.5rem;
+            text-decoration: none;
+        }
+        .social-links img {
+            width: 30px;
+            height: 30px;
+        }
+        .skills {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .skill {
             text-align: center;
+        }
+        .skill img {
+            width: 50px;
+            height: 50px;
+        }
+        .skill p {
+            margin-top: 0.5rem;
+            font-size: 1rem;
+            color: #333;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="intro">
-            <h1>Hi everyone.<br>I'm Aphinan.</h1>
-            <p>Student | Front-end Dev | UX&UI Design</p>
-            <div class="social-icons">
-                <a href="#">🐱</a>
-                <a href="#">🌐</a>
-                <a href="#">📷</a>
-                <a href="#">✉️</a>
+            <h1>Hi.<br>I'm Kanyarat.</h1><br>
+            <p>Student | Software Engineering</p><br>
+            <p>Hello, my name is Kalyarat. I don't know what I like to study. And come to study this field. It's very painful. Before I can go through each day. It makes me feel that studying what you like is the best. Even if it's a little more difficult to find a job than other professions, study. It's better than losing your mental health every day.</p>
+            <div>
+                <section id="home" class="section">
+                <div class="container">
+                    <section id="experience" class="section">
+                        <div class="section">
+                            <h2>My Skills</h2>
+                            <div class="skills">
+                                <div class="skill">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python">
+                                    <p>Python</p>
+                                </div>
+                                <div class="skill">
+                                    <img src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg" alt="Java">
+                                    <p>Java</p>
+                                </div>
+                                <div class="skill">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML">
+                                    <p>HTML</p>
+                                </div>
+                                <div class="skill">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS">
+                                    <p>CSS</p>
+                                </div>
+                                <div class="skill">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" alt="Figma">
+                                    <p>Figma</p>
+                                </div>
+                                <div class="skill">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Vue.js_Logo_2.svg" alt="Vue">
+                                    <p>Vue</p>
+                                </div>
+                                <div class="skill">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg" alt="Tailwind CSS">
+                                    <p>Tailwind</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <section id="contact" class="section">
+                    <h2>Contact Me</h2>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/amonthep.sutthalun" target="_blank">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Facebook_icon.svg" alt="Facebook">
+                        </a>
+                        <a href="https://www.instagram.com/_mxnthxp/?next=%2F" target="_blank">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram">
+                        </a>
+                        <a href="https://github.com/Xmontxp" target="_blank">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub">
+                        </a>
+                    </div>
+                </section>
             </div>
-            <a href="#" class="about-btn">ABOUT ME</a>
         </div>
         <div class="profile-pic">
-            <img src="profile-pic.png" alt="Profile Picture">
+            <img src="https://media.discordapp.net/attachments/1157742544592048168/1315759488262733897/IMG_4149.jpg?ex=67589403&is=67574283&hm=297c38b2926adb459396d3645226b488035e3b4b90ba76b4498ea0799b05e692&=&format=webp&width=614&height=614" alt="Profile Picture">
         </div>
     </div>
     <footer>
-        &copy; 2024 Your Name
     </footer>
 </body>
 </html>
